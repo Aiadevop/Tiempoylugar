@@ -1,0 +1,42 @@
+{
+  type:'Feature Collection',
+  query:['madrid'],
+  features:[
+    {
+
+id:'place.5346693421448390¹,
+type:'Feature',
+place_type:[Array],
+relevance:1,
+properties:[Object],
+text_es:'Madridejos',
+language_es:'es',
+place_name_es:'Madridejos,Toledo,España'
+text:'Madridejos',
+language:'es',
+place_name:'Madridejos,Toledo,España',
+bbox:[Array],
+center:[Array],
+geometry:[Object],
+context:[Array]
+},
+{
+
+id:'place.10708255346562040¹,
+type:'Feature',
+place_type:[Array],
+relevance:1,
+properties:[Object],
+text_es:'Madrid',
+language_es:'es',
+place_name_es:'Madrid,Madrid,España',
+text:'Madrid',
+language:'es',
+place_name:'Madrid,Madrid,España',
+bbox:[Array],
+center:[Array],
+geometry:[Object],
+context:[Array]
+
+}
+]

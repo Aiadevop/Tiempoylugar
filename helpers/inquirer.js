@@ -52,7 +52,7 @@ const inquirerPausa = async() => {
 
 }
 
-const leerTarea = async(message) => {
+const leerInput = async(message) => {
 
     const pregunta = [{
         type: 'input',
@@ -70,28 +70,28 @@ const leerTarea = async(message) => {
     return desc;
 }
 
-const listadoTareasBorrar = async(tareas = []) => {
+const listarLugares = async(lugares = []) => {
 
-    const choices = tareas.map((tarea, i) => { //map descompone la tarea en sus hijos
+    const choices = lugares.map((lugar, i) => { //map descompone la tarea en sus hijos
         //permitiendonos mostrarlas con el return después como queramos.
         const idx = `${i+1}.`.green;
         return { //muestra las tareas de 1 en 1 por eso hay que meterlas en la list de preguntas.
             //msg: 'Hola' Si pusieramos esto mostraría hola en cada hueco de la tarea.
-            value: tarea.id,
-            name: `${idx} ${tarea.descripcion}`
+            value: lugar.id,
+            name: `${idx} ${lugar.nombre}`
         }
     });
 
     //Para añadir al inicio una opción de salirse sin borrar.
     choices.unshift({
         value: '0',
-        name: '0.'.green + ' Salir sin borrar tarea.'
+        name: '0.'.green + 'Cancelar.'
     });
 
     const preguntas = {
         type: 'list',
         name: 'id',
-        message: 'Borrar',
+        message: 'Seleccione lugar:',
         choices
 
     }
@@ -142,8 +142,8 @@ const mostrarListadoChecklist = async(tareas = []) => {
 export {
     inquirerMenu,
     inquirerPausa,
-    leerTarea,
-    listadoTareasBorrar,
+    leerInput,
+    listarLugares,
     confirmar,
     mostrarListadoChecklist
 };
