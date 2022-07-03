@@ -27,7 +27,7 @@ const main = async() => {
 
                 //busquedas.agregarHistorial(lugarSeleccionado.nombre);                
 
-                const lugarSeleccionado = lugares.find(l => l.id === id);
+                //const lugarSeleccionado = lugares.find(l => l.id === id);
 
                 //Datos del clima.
                 //const clima = await busquedas.climaLugar(lugarSeleccionado.lat, lugarSeleccionado.lon);
@@ -39,27 +39,32 @@ const main = async() => {
                 const lon2 = -84.08333;
                 const name2 = 'San José'
 
-                busquedas.agregarHistorial(name);
+                busquedas.agregarHistorial(name2);
                 // Clima
-                const clima = await busquedas.climaLugar(lat, lon);
+                const clima = await busquedas.climaLugar(lat2, lon2);
                 console.log(clima);
                 //Mostrar resultados
                 // console.log('\nInformación de la ciudad\n'.green);
-                console.log('Ciudad: ', /*lugarSeleccionado.nombre*/ name);
-                console.log('Latitud: ', /*lugarSeleccionado.lat*/ lat);
-                console.log('Longitud: ', /*lugarSeleccionado.log*/ lon);
+                console.log('Ciudad: ', /*lugarSeleccionado.nombre*/ name2);
+                console.log('Latitud: ', /*lugarSeleccionado.lat*/ lat2);
+                console.log('Longitud: ', /*lugarSeleccionado.log*/ lon2);
                 console.log('Temperatura:', clima.temp);
                 console.log('Mínima:', clima.min);
                 console.log('Máxima:', clima.max);
                 // console.log('¿Cómo está el clima:', busquedas.climaLugar, '?');
                 break;
             case 2:
-                busquedas.historial.forEach((lugar, i) => {
-                    const idx = `${ i + 1 }.`.green;
-                    console.log(`${ idx } ${ lugar } `);
-                })
 
-                break;
+                //busquedas.historialbienPresentado.forEach( (lugar, i) => {
+                //     const idx = `${ i + 1 }.`.green;
+                //     console.log(`${ idx } ${ lugar } `);
+                //})
+
+                const busqueda = new Busquedas();
+                console.log(busqueda);
+
+                busquedas.leerDB();
+
             case 0:
 
                 break;

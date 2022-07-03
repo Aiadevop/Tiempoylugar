@@ -38,5 +38,23 @@ center:[Array],
 geometry:[Object],
 context:[Array]
 
+},
+
+{
+  id:'place.10299848042562040',
+  type:'Feature',
 }
+  place_type:['place'],
+  relevance:1,
+  properties:{wikidata:'Q2316396'},
+  text_es:'Madrid',
+  language_es:'es',
+  place_name_es:'Madrid,Cundinamarca,Colombia',
+  text:'Madrid',
+  language:'es',
+  place_name:'Madrid,Cundinamarca,Colombia',
+  bbox:[-74.328011,4.682661,-74.174986,4.865381],
+  center:[-74.26389,4.73056],
+  geometry:{type:'Point',coordinates:[Array]},
+  context:[[Object],[Object]]
 ]
